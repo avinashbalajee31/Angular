@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CATEGORY</title>
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="cart.component.css">
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li>BITES</li>
+            <li style = "position:relative; left:900px; ">
+                <a > TOTAL PRICE&mdash;&#8377;{{totalPrice}}</a>
+            </li>
+            <li style = "position:relative; left:950px; ">
+              <a (click) = "logoutUser()"
+              > LOG OUT </a>
+            </li>
+          </ul>
+        <div class="heading ">
+            <h1>&mdash; CART &mdash; </h1>
+        </div>
+        <div *ngFor="let i of cart;let j=index">
+        <div class="food-items">
+            
+            <div class="details">
+                <div class="details-sub">
+                    <h5>{{i.dishName}}&mdash;{{i.dishPrice}}</h5>
+                    
+                </div>
+                <p></p>
+                <form #name="ngForm" (ngSubmit)="removeDish(j)">
+                    <input type="submit" value="REMOVE" >
+                </form>
+                </div>
+              </div>
+        </div>
+
+       
+    </div>
+</body>
+</html>
+

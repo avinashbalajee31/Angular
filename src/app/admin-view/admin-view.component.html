@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="admin-view.component.css">
+</head>
+<body>
+<div class="menu">
+<ul>
+    <li>BITES</li>
+    <li style = "position:relative; left:300px; ">
+      <a routerLink="/viewUsers" routerLinkActive=""> VIEW USERS </a>
+    </li>
+    <li style = "position:relative; left:350px; ">
+        <a routerLink="/addHotels" routerLinkActive=""> ADD HOTELS </a>
+      </li>
+      <li style = "position:relative; left:400px; ">
+        <a routerLink="/viewHotels" routerLinkActive=""> VIEW HOTELS </a>
+      </li>
+    <li style = "position:relative; left:450px; ">
+      <a (click) = "logoutUser()"
+      > LOG OUT </a>
+    </li>
+  </ul>
+  <div class="heading ">
+    <h1>&mdash; USERS &mdash; </h1>
+</div>
+<div *ngFor="let i of user">
+<div class="food-items">
+    
+    <div class="details">
+        <div class="details-sub">
+            <h5>{{i.first_name}}&ensp;{{i.last_name}}</h5>
+            
+        </div>
+        <p>{{i.email}}</p>
+        <form #name="ngForm" (ngSubmit)="del(i.id)">
+            <input type="submit" value="DELETE" >
+            </form>
+        </div>
+      </div>
+</div>
+</div>
+</body>
+</html>

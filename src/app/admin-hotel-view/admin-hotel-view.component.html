@@ -1,0 +1,72 @@
+<!-- <link rel="stylesheet" href="admin-hotel-view.component.css">
+<div>
+<ul>
+    <li>BITES</li>
+    <li style = "position:relative; left:300px; ">
+      <a routerLink="/viewUsers" routerLinkActive="active"> VIEW USERS </a>
+    </li>
+    <li style = "position:relative; left:350px; ">
+        <a > ADD HOTELS </a>
+      </li>
+      <li style = "position:relative; left:400px; ">
+        <a > VIEW HOTELS </a>
+      </li>
+    <li style = "position:relative; left:450px; ">
+      <a > LOG OUT </a>
+    </li>
+  </ul>
+</div> -->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CATEGORY</title>
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="admin-hotel-view.component.css">
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li>BITES</li>
+            <li style = "position:relative; left:300px; ">
+              <a routerLink="/viewUsers" routerLinkActive=""> VIEW USERS </a>
+            </li>
+            <li style = "position:relative; left:350px; ">
+                <a routerLink="/addHotels" routerLinkActive=""> ADD HOTELS </a>
+              </li>
+              <li style = "position:relative; left:400px; ">
+                <a routerLink="/viewHotels" routerLinkActive=""> VIEW HOTELS </a>
+              </li>
+            <li style = "position:relative; left:450px; ">
+              <a (click) = "logoutUser()"
+              > LOG OUT </a>
+            </li>
+          </ul>
+        <div class="heading ">
+            <h1>&mdash; HOTELS &mdash; </h1>
+        </div>
+        <div *ngFor="let i of hotels">
+        <div class="food-items">
+            
+            <div class="details">
+                <div class="details-sub">
+                    <h5>{{i.hotelName}}</h5>
+                    
+                </div>
+                <p>{{i.categoryType}}</p>
+                <form #name="ngForm" (ngSubmit)="del(i.id)">
+                    <input type="submit" value="DELETE" >
+                </form>
+                </div>
+              </div>
+        </div>
+
+       
+    </div>
+</body>
+</html>
+

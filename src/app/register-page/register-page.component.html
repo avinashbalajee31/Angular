@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="register-page.component.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Square Peg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven Pro">
+    <!-- <script>
+      function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  let x1 = document.forms["myForm"]["lname"].value;
+  let y = document.forms["myForm"]["password"].value;
+  let z = document.forms["myForm"]["password1"].value;
+  let m = document.forms["myForm"]["email"].value;
+
+  var emailCharacter = /[ @ ]/;
+  var specialCharacter = /[ `!@#$%^&*()_+\-={};':"|,.<>?~]/;
+
+
+  if (x == "") 
+  {
+    alert("missed to fill the field first name");
+    return false;
+  }
+  if (x1 == "") 
+  {
+    alert("missed to fill the field last name");
+    return false;
+  }
+  
+  if(y.length<8){
+     alert("password length is less");
+      return false;
+  }
+  if(specialCharacter.test(y)){
+
+  }
+  if(!(z.trim() === y.trim()))
+    {
+      alert("password mismatched");
+      return false;
+    }
+  if(emailCharacter.test(m))
+  {
+  	alert("you are less than 18 years");
+    return false;
+  }  
+}
+
+  </script> -->
+  </head>
+  <body class="body-sign-up">
+    <div>
+      <img style="position:absolute; top:0px; left:0px; margin-left : 0%;  width: 1365.5px; height: 657px;" src="../../assets/images/rednegg.jpg">     
+      <img style="position: absolute; margin-left: 37%; margin-top: 8%;" src="../../assets/images/bites-b1.png" alt="" width="50px"height="50px"> 
+    <em class="bites">ites</em>
+    <div class="signup-box">
+      <form #signUp="ngForm" name="myForm"  (ngSubmit)="data(signUp.value)" >
+        <label>First Name</label>
+        <input type="text" placeholder="" name="fname" #fname="ngModel" required ngModel/>
+        <span *ngIf="fname.invalid && fname.touched" style ="color: red">NO NUMBERS</span>
+        <br>
+        <label>Last Name</label>
+        <input type="text" placeholder="" name="lname"  #lname="ngModel" ngModel/>
+        <span *ngIf="lname.invalid && lname.touched" style ="color: red">NO NUMERICS</span>
+        <br>
+        <label>Email</label>
+        <input type="email" placeholder="" name="email" pattern="[a-zA-z.@]+$" #email="ngModel" required ngModel/>
+        <span *ngIf="email.invalid && email.touched" style ="color: red">INVALID EMAIL</span>
+        <br>
+        <label>Password</label>
+        <input type="password" placeholder="" name="password" #password="ngModel" required ngModel/>
+        <span *ngIf="password.invalid && password.touched" style ="color: red">INVALID PASSWORD</span>
+        <br>
+        <label>Confirm Password</label>
+        <input type="password" placeholder="" name="confirmPassword" #confirmPassword="ngModel" required ngModel/>
+        <span *ngIf="confirmPassword.invalid && confirmPassword.touched" style ="color: red">INVALID PASSWORD</span>
+        <br>
+        <input type="submit" [disabled]="!signUp.valid" value="SIGN UP" />
+      </form>
+      <span></span>
+      <br>
+      <p>
+        By clicking the Sign Up button,you agree to our <br />
+        <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
+      </p>
+      <p class="para-2">
+        Already have an account? <a routerLink="/login" routerLinkActive="active">Login here</a>
+      </p>
+    

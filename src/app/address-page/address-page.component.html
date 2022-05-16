@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ADDRESS INFO</title>
+    <link rel="stylesheet" href="address-page.component.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Square Peg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven Pro">
+  
+  </head>
+  <body class="body-sign-up">
+    <img style="position:absolute; top:0px; left:0px; margin-left : 0%;  width: 1365.5px; height: 657px;" src="../../assets/images/rednegg.jpg">     
+
+    <div>
+
+    <img style="position: absolute; margin-left: 37.5%; margin-top: 6%;" src="../../assets/images/bites-b1.png
+    " alt="" width="50px"height="50px"> 
+    <em class="bites">ites</em>
+    <div class="signup-box">
+      <form  #detail="ngForm"  (ngSubmit)="addDetail(detail.value)">
+        <label>DOOR NUMBER*</label>
+        <input type="text" placeholder="" name="doorno" #doorno="ngModel" required ngModel/>
+        <label>STREET NAME*</label>
+        <input type="text" placeholder="" name="street" #street="ngModel" required ngModel/>
+        <label>AREA*</label>
+        <input type="text" placeholder="" name="area" #area="ngModel" required ngModel/>
+        <label>CITY*</label>
+        <input type="text" placeholder="" name="city" #city="ngModel" required ngModel/>
+        <label>PINCODE*</label>
+        <input type="text" placeholder="" name="pincode" #pincode="ngModel" required ngModel/>
+        <label>PHONE NUMBER*</label>
+        <input type="text" placeholder="" name="phoneNumber" #phoneNumber="ngModel" required ngModel/>
+        <input type="submit" value="Submit" />
+      </form>
+    
+

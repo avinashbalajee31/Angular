@@ -1,0 +1,29 @@
+ul{
+    /* width: 1349px; */
+    width: 100%;
+    margin:auto;
+    border: 1px solid #404040;
+    background-color: #404040;
+    height: 60px;
+}
+ul li{
+    list-style-type: none;
+    display: inline-block;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    height: 50px;
+}
+li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+li a:hover{
+    text-decoration: none;
+    color:   #F13F3F  ;
+    cursor: pointer;
+}
+body{
+    font-family: 'Poppins',sans-serif;
+}

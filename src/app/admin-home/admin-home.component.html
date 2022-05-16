@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ADMIN HOME</title>
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="admin-home.component.css">
+</head>
+<body>
+    <div>
+        <ul>
+            <li>BITES</li>
+            <li style = "position:relative; left:300px; ">
+              <a routerLink="/viewUsers" routerLinkActive=""> VIEW USERS </a>
+            </li>
+            <li style = "position:relative; left:350px; ">
+                <a routerLink="/addHotels" routerLinkActive=""> ADD HOTELS </a>
+              </li>
+              <li style = "position:relative; left:400px; ">
+                <a routerLink="/viewHotels" routerLinkActive=""> VIEW HOTELS </a>
+              </li>
+            <li style = "position:relative; left:450px; ">
+              <a (click) = "logoutUser()"
+              > LOG OUT </a>
+            </li>
+          </ul>
+        </div>
+        
+</body>
+</html>

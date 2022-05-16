@@ -1,0 +1,110 @@
+<!-- <section style="padding: 100px Opx; ">
+    <div class="container">
+      <div class="row">
+        <ul class="Items">
+          <li *ngFor="let i of foodlist">
+         <div class="col-md-3">
+             <div class=" "style= "padding:15px 20px;">
+             <div class="card card-new" style="width: 18rem; ">
+                  <img class="card-img-top" src="{{imageSrc}}" alt="Card image cap"> -->
+
+
+                <!-- <div class="card-body">
+                 <h6><small class="card-title head-title">{{i.name}}</small></h6>
+                  <small class="card-text">{{i. description}}</small>
+                  <ul class="inner-ul">
+                    <li class="li-inner"><small>Cuisine: {{i.category}}</small></li>
+                 <li class="li-inner"><small>Price:&nbsp;<i class="fa fa-inr "> </i>{{i.price}}</small></li>
+                 <li class="li-inner"><small class="rating-box"><i class="fa fa-star-o"style="color: #FFD700;" 
+                    aria-hidden="true"></i>&nbsp; {{i.ratings}}</small></li>
+                  </ul>
+                  <a href="#" class="circle"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </div>
+            </div>
+            </li>
+            </ul>
+        </div>
+  </div>
+  </section> --> 
+  <!-- <section>
+    <ul  *ngFor="let i of HotelList" >
+        <li>
+            {{i}}
+        </li>
+        <li>
+            {{i.first_name}}
+        </li>
+        <li>
+            {{i.email}}
+        </li>
+    </ul>
+  </section>
+
+ -->
+ <!-- <div class="container">
+  <table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>first_name</th>
+      <th>email</th>
+      
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let i of user">
+      <td><span>{{i.id}}</span></td>
+      <td><span>{{i.hotelName}}</span></td>
+      <td><span>{{i.categoryType}}</span></td>
+    </tr>
+    </tbody>
+  </table>
+</div> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CATEGORY</title>
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="hotels.component.css">
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li>BITES</li>
+            <li style = "position:relative; left:900px; ">
+              <a routerLink="/Category" routerLinkActive="active" style="color: white; text-decoration:none"> CATEGORY </a>
+            </li>
+            <li style = "position:relative; left:950px; ">
+              <a (click) = "logoutUser()"> LOG OUT </a>
+            </li>
+          </ul>
+        <div class="heading ">
+            <h1>&mdash; LIST OF HOTELS &mdash; </h1>
+        </div>
+        <div *ngFor="let i of user">
+        <div class="food-items">
+            <img [src]="i.image">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>{{i.hotelName}}</h5>
+                    
+                </div>
+                <!-- <p>It is characterized by fine selection of ingredients, precise processing, particular care to the amount of fire, and substantial nourishment. Local flavors and snacks, and special dishes have formed according to regions, local products, climate, historical factors, and eating habits.</p> -->
+                <form #name="ngForm" (ngSubmit)="outlet(i.hotelName)" >
+                    <input type="submit" value="SELECT" >
+                    </form>
+                </div>
+              </div>
+        </div>
+
+       
+    </div>
+</body>
+</html>
+

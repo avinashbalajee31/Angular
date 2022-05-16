@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" href="login-page.component.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Square Peg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven Pro">    
+  </head>
+  <body>
+    <img style="position:absolute; top:0px; left:0px; margin-left : 0%;  width: 1365.5px; height: 657px;" src="../../assets/images/rednegg.jpg">     
+
+    <div class="login-box">
+      <img style="position: absolute; margin-left: 10%; margin-top: -2%;" src="../../assets/images/bites-b1.png" alt="" width="50px"height="50px"> 
+      <em class="bitesLogin">ites</em><br>
+      <h1 style="position: absolute;font-family:'Maven Pro', sans-serif; margin-left:9.5%;">LOGIN</h1>
+      <form #login="ngForm" (ngSubmit)="loginDetail(login.value)">
+        <label >Email</label>
+        <input type="email" placeholder="" name="email" pattern="[a-zA-z.@]+$" #email="ngModel" ngModel required=""/>
+        <span *ngIf="email.invalid && email.touched" style ="color: red">Invalid input</span>
+        <br>
+        <label>Password</label>
+        <input type="password" placeholder="" name="password" minlength="8" maxlength="14" #password="ngModel" ngModel required=""/>
+        <span *ngIf="password.invalid && password.touched" style ="color: red">Invalid input</span>
+        <br>
+        <input type="submit" [disabled]="!login.valid" value="LOGIN" />
+      </form>
+      <br>
+      <p class="para-2">
+        Not have an account? <a routerLink="/register" routerLinkActive="active">Sign Up Here</a>
+      </p>
+      <p class="para-3">
+        If You Are A Admin <a routerLink="/adminLogin" routerLinkActive="active">click here</a>
+      </p>
+    </div>
+    
+  </body>
+</html>

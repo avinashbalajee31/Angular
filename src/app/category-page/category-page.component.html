@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CATEGORY</title>
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="category-page.component.css">
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li>BITES</li>
+            <li style = "position:relative; left:1150px; ">
+              <a (click) = "logoutUser()"> LOG OUT </a>
+            </li>
+          </ul>
+        <div class="heading">
+            <h1>&mdash; CATEGORY &mdash; </h1>
+        </div>
+        <div class="food-items">
+            <img src="../../assets/images/soup.jpeg">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>CHINESE</h5>
+                    
+                </div>
+                <p>It is characterized by fine selection of ingredients, precise processing, particular care to the amount of fire, and substantial nourishment. Local flavors and snacks, and special dishes have formed according to regions, local products, climate, historical factors, and eating habits.</p>
+                <form #name="ngForm" (ngSubmit)="cat(1)">
+                    <input type="submit" value="SELECT" >
+                    </form>
+                </div>
+        </div>
+
+        <div class="food-items">
+            <img src="../../assets/images/burger.jpg">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>AMERICAN</h5>
+                    
+                </div>
+                
+                <p>American food is best exemplified by two distinct branches of cuisine: one that utilizes innovation and a fusion of cultures and one that rests on bland, simple flavors as well as food processing</p>
+                <form #name="ngForm" (ngSubmit)="cat(2)">
+                <input type="submit" value="SELECT" >
+                </form>
+            </div>
+        </div>
+
+        <div class="food-items">
+            <img src="../../assets/images/dosa.jpg">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>INDIAN</h5>
+                    
+                </div>
+                <p>Spicy, rich, flavourful and diverse are terms that are frequently used to describe Indian food. All these words are apt in describing Indian cuisine, for it is diverse in variety and taste, and is made up from a wide array of regional cuisines throughout various parts of India.</p>
+                <form #name="ngForm" (ngSubmit)="cat(3)">
+                    <input type="submit" value="SELECT" >
+                    </form>
+            </div>
+        </div>
+
+        <div class="food-items">
+            <img src="../../assets/images/Spaghetti.jpeg">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>ITALIAN</h5>
+                    
+                </div>
+                <p>Italian cuisine has a great variety of different ingredients which are commonly used, ranging from fruits, vegetables, grains, cheeses, meats and fish.</p>
+                <form #name="ngForm" (ngSubmit)="cat(4)">
+                    <input type="submit" value="SELECT" >
+                    </form>
+            </div>
+        </div>
+
+        <div class="food-items">
+            <img src="../../assets/images/chicken.jpeg">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>ARABIAN</h5>
+                    
+                </div>
+                <p>Rich, filling, buttery and luscious are all words that can describe the wonderful creations of the Middle East.</p>
+                <form #name="ngForm" (ngSubmit)="cat(5)">
+                    <input type="submit" value="SELECT" >
+                    </form>
+                </div>
+        </div>
+
+    </div>
+</body>
+</html>
