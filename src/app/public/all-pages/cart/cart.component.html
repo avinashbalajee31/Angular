@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CATEGORY</title>
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="cart.component.css">
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li>BITES</li>
+            <li style = "position:relative; left:750px; ">
+                <a routerLink="/menu" routerLinkActive="active" onmouseover="style='color: #f13f13;cursor: pointer;'" onmouseleave="style='color:white'"> MENU</a>
+            </li>
+            <li style = "position:relative; left:800px; ">
+                <a > TOTAL PRICE&mdash;&#8377;{{totalPrice}}</a>
+            </li>
+            <li style = "position:relative; left:850px; ">
+              <a (click) = "logoutUser()"
+              > LOG OUT </a>
+            </li>
+          </ul>
+        <div class="heading ">
+            <h1>&mdash; CART &mdash; </h1>
+        </div>
+        <div *ngFor="let i of cart;let j=index">
+        <div class="food-items">
+            
+            <div class="details">
+                <div class="details-sub">
+                    <h5>{{i.dishName}}&mdash;{{i.dishPrice}}</h5>
+                    
+                </div>
+                <p></p>
+                <form #name="ngForm" (ngSubmit)="removeDish(j)">
+                    <input type="submit" value="REMOVE" >
+                </form>
+                </div>
+              </div>
+        </div>
+        
+       
+    </div><br><br>
+    <div class="buttons">
+        <label class="txt">TOTAL PRICE &emsp;&mdash;&#8377;{{totalPrice}}</label><br><br>
+        
+        <a  routerLink="/checkAddress" routerLinkActive="active">
+            <button>CHECK ADDRESS</button> </a><br><br>
+            <!-- <div *ngIf="condition; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>Content to render when condition is true.</ng-template>
+<ng-template #elseBlock>Content to render when condition is false.</ng-template> -->
+             <div *ngIf="cart.length==0; then thenBlock else elseBlock"></div>   
+             <ng-template #thenBlock> <a  >
+               <button type="button" disabled>NO ITEMS IN CART</button></a> </ng-template>
+               <ng-template #elseBlock><a  routerLink="/order" routerLinkActive="active" (click)="order()">
+                <button >CONFIRM ORDER</button></a> </ng-template>
+                <!-- <a *ngIf="(cart.length!=0);" routerLink="/order" routerLinkActive="active" (click)="order()">
+                    <button >CONFIRM ORDER</button></a> -->
+        
+    </div>
+</body>
+</html>
+

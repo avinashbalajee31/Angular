@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CATEGORY</title>
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="menu.component.css">
+    
+        
+</head>
+<body>
+    <div class="menu" >
+        <ul>
+            <li>BITES</li>
+            <li style = "position:relative; left:750px; ">
+              <a routerLink="/Category" routerLinkActive="active"  onmouseover="style='color: #f13f13;cursor: pointer;'" onmouseleave="style='color:white'"> CATEGORY </a>
+            </li>
+            <li style = "position:relative; left:800px; ">
+                <a routerLink="/Cart" routerLinkActive="active"  onmouseover="style='color: #f13f13;cursor: pointer;'" onmouseleave="style='color:white'"> CART </a>
+              </li>
+            <li style = "position:relative; left:850px; ">
+              <a (click) = "logoutUser()"
+              > LOG OUT </a>
+            </li>
+          </ul>
+        <div class="heading ">
+            <h1>&mdash; MENU &mdash; </h1>
+        </div>
+        <div *ngFor="let i of menu">
+        <div class="food-items">
+            
+            <div class="details">
+                <div class="details-sub">
+                    <h5>{{i.dishes}}    &mdash; &ensp;&#8377;{{i.price}}</h5>
+                    
+                </div>
+                <p>{{i.hotelName}}</p>
+                <form #name="ngForm" (ngSubmit)="addToCart({dishName:i.dishes,dishPrice:i.price})">
+                    <input type="submit" value="ADD" >
+                    </form>
+                </div>
+              </div>
+        </div>
+       
+    </div>
+</body>
+</html>
+
