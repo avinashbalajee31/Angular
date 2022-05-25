@@ -5,23 +5,26 @@
 <link rel="stylesheet" href="admin-view.component.css">
 </head>
 <body>
+  <div>
+    <ul>
+      <li>BITES</li>
+      <li style = "position:relative; left:300px; ">
+        <a routerLink="/viewUsers" routerLinkActive=""> VIEW USERS </a>
+      </li>
+      <li style = "position:relative; left:350px; ">
+          <a routerLink="/addHotels" routerLinkActive=""> ADD HOTELS </a>
+        </li>
+        <li style = "position:relative; left:400px; ">
+          <a routerLink="/viewHotels" routerLinkActive=""> VIEW HOTELS </a>
+        </li>
+      <li style = "position:relative; left:450px; ">
+        <a (click) = "logoutUser()"
+        > LOG OUT </a>
+      </li>
+    </ul>
+  </div>
 <div class="menu">
-<ul>
-    <li>BITES</li>
-    <li style = "position:relative; left:300px; ">
-      <a routerLink="/viewUsers" routerLinkActive=""> VIEW USERS </a>
-    </li>
-    <li style = "position:relative; left:350px; ">
-        <a routerLink="/addHotels" routerLinkActive=""> ADD HOTELS </a>
-      </li>
-      <li style = "position:relative; left:400px; ">
-        <a routerLink="/viewHotels" routerLinkActive=""> VIEW HOTELS </a>
-      </li>
-    <li style = "position:relative; left:450px; ">
-      <a (click) = "logoutUser()"
-      > LOG OUT </a>
-    </li>
-  </ul>
+
   <div class="heading ">
     <h1>&mdash; USERS &mdash; </h1>
 </div>

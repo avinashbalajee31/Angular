@@ -11,20 +11,23 @@
         
 </head>
 <body>
+  <div>
+    <ul>
+      <li>BITES</li>
+      <li style = "position:relative; left:750px; ">
+        <a routerLink="/Category" routerLinkActive="active"  onmouseover="style='color: #f13f13;cursor: pointer;'" onmouseleave="style='color:white'"> CATEGORY </a>
+      </li>
+      <li style = "position:relative; left:800px; ">
+          <a routerLink="/Cart" routerLinkActive="active"  onmouseover="style='color: #f13f13;cursor: pointer;'" onmouseleave="style='color:white'"> CART </a>
+        </li>
+      <li style = "position:relative; left:850px; ">
+        <a (click) = "logoutUser()"
+        > LOG OUT </a>
+      </li>
+    </ul>
+  </div>
     <div class="menu" >
-        <ul>
-            <li>BITES</li>
-            <li style = "position:relative; left:750px; ">
-              <a routerLink="/Category" routerLinkActive="active"  onmouseover="style='color: #f13f13;cursor: pointer;'" onmouseleave="style='color:white'"> CATEGORY </a>
-            </li>
-            <li style = "position:relative; left:800px; ">
-                <a routerLink="/Cart" routerLinkActive="active"  onmouseover="style='color: #f13f13;cursor: pointer;'" onmouseleave="style='color:white'"> CART </a>
-              </li>
-            <li style = "position:relative; left:850px; ">
-              <a (click) = "logoutUser()"
-              > LOG OUT </a>
-            </li>
-          </ul>
+        
         <div class="heading ">
             <h1>&mdash; MENU &mdash; </h1>
         </div>

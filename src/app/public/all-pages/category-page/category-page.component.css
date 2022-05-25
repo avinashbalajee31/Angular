@@ -1,5 +1,5 @@
 ul{
-    width: 1349px;
+    width: 100%;
     margin:auto;
     border: 1px solid #404040;
     background-color: #404040;
@@ -94,3 +94,32 @@ form input[type="submit"]{
     height: 50px;
     cursor: pointer;
 }
+  input[type=checkbox]{
+    display: none;
+   }
+   .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+   }
+   /* @media (max-width: 800px) {
+    .menu {
+     display:none;
+     position: absolute;
+     background-color:black;
+     right: 0;
+     left: 0;
+     text-align: center;
+     padding: 16px 0;
+    }
+     .menu li + li {
+     margin-top: 12px;
+    }
+    input[type=checkbox]:checked ~ .menu{
+     display: block;
+    }
+    .hamburger {
+     display: block;
+     color: white;
+    }
+    } */

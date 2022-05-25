@@ -1,3 +1,3 @@
 export class Url {
-    static globalUrl:string = "54.151.59.118:9002"
+    static globalUrl:string = "54.183.215.106:9002"
 }

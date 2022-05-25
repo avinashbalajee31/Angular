@@ -9,20 +9,21 @@
     <link rel="stylesheet" href="cart.component.css">
 </head>
 <body>
+    <ul>
+        <li>BITES</li>
+        <li style = "position:relative; left:750px; ">
+            <a routerLink="/menu" routerLinkActive="active" onmouseover="style='color: #f13f13;cursor: pointer;'" onmouseleave="style='color:white'"> MENU</a>
+        </li>
+        <li style = "position:relative; left:800px; ">
+            <a > TOTAL PRICE&mdash;&#8377;{{totalPrice}}</a>
+        </li>
+        <li style = "position:relative; left:850px; ">
+          <a (click) = "logoutUser()"
+          > LOG OUT </a>
+        </li>
+      </ul>
     <div class="menu">
-        <ul>
-            <li>BITES</li>
-            <li style = "position:relative; left:750px; ">
-                <a routerLink="/menu" routerLinkActive="active" onmouseover="style='color: #f13f13;cursor: pointer;'" onmouseleave="style='color:white'"> MENU</a>
-            </li>
-            <li style = "position:relative; left:800px; ">
-                <a > TOTAL PRICE&mdash;&#8377;{{totalPrice}}</a>
-            </li>
-            <li style = "position:relative; left:850px; ">
-              <a (click) = "logoutUser()"
-              > LOG OUT </a>
-            </li>
-          </ul>
+        
         <div class="heading ">
             <h1>&mdash; CART &mdash; </h1>
         </div>
@@ -55,11 +56,17 @@
              <div *ngIf="cart.length==0; then thenBlock else elseBlock"></div>   
              <ng-template #thenBlock> <a  >
                <button type="button" disabled>NO ITEMS IN CART</button></a> </ng-template>
-               <ng-template #elseBlock><a  routerLink="/order" routerLinkActive="active" (click)="order()">
+               <ng-template #elseBlock><a  (click)="order()">
                 <button >CONFIRM ORDER</button></a> </ng-template>
                 <!-- <a *ngIf="(cart.length!=0);" routerLink="/order" routerLinkActive="active" (click)="order()">
                     <button >CONFIRM ORDER</button></a> -->
         
+    </div>
+    <br><br>
+    <div class="footer">
+        <br>
+        <label class="foot" >        &#10003;&nbsp;FRESH FOOD &nbsp;&nbsp; &mdash;&nbsp;&#10003;&nbsp;QUALITY INGREDIENTS&nbsp;&nbsp;&mdash;&nbsp;&#10003;&nbsp;QUICKER DELIVERY
+        </label>
     </div>
 </body>
 </html>

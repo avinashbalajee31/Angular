@@ -42,7 +42,7 @@ export class MenuComponent implements OnInit {
       }
     );
   }
-  addToCart(foodData:any,){ 
+  addToCart(foodData:any){ 
 
     console.log(foodData)
     alert("dish added")

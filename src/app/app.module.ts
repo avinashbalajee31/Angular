@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
   
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './public/all-pages/home-page/home-page.component';
@@ -50,7 +49,6 @@ import { AllPagesModule } from './public/all-pages/all-pages.module';
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,HttpClientModule,
-    ToastrModule.forRoot(),
     AllPagesModule
   ],
   

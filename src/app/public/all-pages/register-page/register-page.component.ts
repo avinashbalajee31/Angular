@@ -17,10 +17,7 @@ export class RegisterPageComponent implements OnInit {
     if(value.confirmPassword==value.password){
     this.http.post("http://"+Url.globalUrl+"/register",{first_name:value.fname,last_name:value.lname,email:value.email,password:value.password})
     .subscribe(
-      (msg)=>{
-    },(error)=>{
-      this.router.navigate(['addressPage'])
-
+      msg=>{this.router.navigate(['addressPage'])
     })
     }
   }
