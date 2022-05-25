@@ -21,6 +21,9 @@ export class ConfirmOrderComponent implements OnInit {
   ngOnInit(): void {
   }
   
+  nav(){
+    this.router.navigate(['Category']);
+  }
 
   logoutUser() {
     localStorage.clear()

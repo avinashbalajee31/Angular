@@ -4,7 +4,7 @@ body{
 }
 .cart-box {
     position: absolute;
-    height: 400px;
+    height: 475px;
     width: 496px;
     margin-left: 30%;
     margin-top: -5%;
@@ -44,6 +44,19 @@ button{
     cursor: pointer;
     margin-left: 30%;
     margin-top: 65%;
+}
+.cat{
+    background-color: #F13F3F;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 180px;
+    height: 50px;
+    cursor: pointer;
+    margin-left: 30%;
+    margin-top: 5%;
 }
 
 @media only screen and (max-width: 600px){
