@@ -100,3 +100,18 @@ form input[type="submit"]{
     height: 50px;
     cursor: pointer;
 }
+.nav-txt1{
+    position:relative; left:35%;
+}
+.nav-txt2{
+    position:relative; left:40%;
+}
+.nav-txt3{
+    position:relative; left:45%;
+}
+.nav-txt4{
+    position:relative; left:50%;
+}
+@media only screen and (max-width: 600px){
+
+}

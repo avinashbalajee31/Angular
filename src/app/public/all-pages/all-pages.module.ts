@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { FormsModule } from '@angular/forms';
 import { AllPagesRoutingModule } from './all-pages-routing.module';
 
 
@@ -8,7 +8,8 @@ import { AllPagesRoutingModule } from './all-pages-routing.module';
   declarations: [],
   imports: [
     CommonModule,
-    AllPagesRoutingModule
+    AllPagesRoutingModule,
+    FormsModule
   ]
 })
 export class AllPagesModule { }
