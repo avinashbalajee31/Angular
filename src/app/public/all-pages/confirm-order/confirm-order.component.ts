@@ -23,6 +23,7 @@ export class ConfirmOrderComponent implements OnInit {
   
   nav(){
     this.router.navigate(['Category']);
+    localStorage.removeItem("cartItem");
   }
 
   logoutUser() {
